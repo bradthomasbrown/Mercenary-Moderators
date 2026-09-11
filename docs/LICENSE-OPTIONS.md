@@ -4,7 +4,7 @@ The owner wants people to inspect the code while retaining more control over reu
 
 ## Updated recommendation: PolyForm Shield plus contribution terms
 
-The owner clarified the goal: prevent someone from copying Mercenary Moderators and providing a competing project, including a free competitor during the beta and competitors after the business develops. People should be able to develop improvements and contribute them to the official project through pull requests.
+The owner clarified the goal: prevent someone from copying Mercenary Moderators and providing a competing project, including a free competitor during the beta and competitors after the business develops. People should be able to develop improvements independently and contribute them to the official project through pull requests, without individual permission or a separate contributor agreement.
 
 **PolyForm Shield 1.0.0** is now the recommended starting point. This supersedes the earlier provisional Strict recommendation. Shield permits changes and redistribution for permitted purposes, while excluding competing products. Strict's general modification restriction would obstruct the contribution model the owner wants.
 
@@ -29,21 +29,26 @@ Shield also has a Discontinued Products provision. A `Licensor Line of Business:
 
 ### Encourage contributions while retaining project control
 
-The recommended package has three parts:
+Shield grants permission in advance to make changes and new works for permitted purposes. Once adopted, it would allow people to develop features, test changes and prepare pull requests without first asking the owner. Ordinary contribution forks and branches serve that permitted development purpose; offering a competing product remains subject to the competition restriction.
+
+The recommended package has two parts:
 
 1. Shield as the source license, with the owner and required notices identified accurately.
-2. A contribution policy that clearly permits the development work needed for patches: contribution forks or branches, local test builds, and pull requests. Explain the distinction between preparing a contribution and offering a competing product. Any supplemental permission should be checked against the chosen license rather than assumed from a README invitation.
-3. A contributor agreement covering the rights the project needs to use, modify, distribute and, if desired, relicense accepted contributions for future releases or commercial terms. Contributors can retain copyright while granting specified rights; merely merging a pull request does not transfer their copyright to the project.
+2. A short contribution policy stating that contributions intentionally submitted for inclusion are offered under the same license as the project. No prior contributor approval, separate CLA signature, copyright assignment or contributor registration is required by the project. Contributors must have the rights needed to submit their work and preserve applicable third-party notices.
+
+The owner explicitly declined the separate contributor agreement previously suggested here. The proposed contribution wording is: "You may develop features and prepare pull requests without asking us first, subject to the project license. By intentionally submitting a contribution for inclusion, you offer your contribution under that same license. No separate contributor agreement is required. Maintainers decide which changes to merge." This is draft policy for adoption alongside the chosen license, not a present license grant.
 
 The policy should make upstream contributions attractive through clear scope, reproducible checks, responsive review and credit. Maintainers retain decisions over merges, the official roadmap, branding and official releases. Neither Shield nor a contribution invitation forces someone to submit every private improvement as a pull request. Independently written alternatives also cannot be ruled out simply by choosing this source license.
 
-No contributor agreement or supplemental legal permission is adopted by this proposal. Have the final source/contribution terms reviewed before applying them.
+Contributors retain their copyright. Merging a pull request approves its inclusion; it does not transfer ownership or automatically grant broader relicensing rights. Without a broader grant, later licensing of others' contributions on different terms may require their permission or replacement of that code. This is the tradeoff of the chosen same-license contribution policy.
+
+No license or contribution terms are adopted by this proposal. Review the final source/contribution text together before applying it, including how the contribution grant permits integration and distribution in official MM releases. Private repository access still follows GitHub's access controls until the owner approves public visibility; that is separate from licensing permission to contribute.
 
 ## TypeScript comparison
 
 [TypeScript's license](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) is Apache 2.0. It permits modification and redistribution, including commercial competing forks, subject to its conditions. It is not an anti-fork or anti-competition license.
 
-Its [contribution policy](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) sets rules for issues, pull requests and review and requires a Contributor License Agreement. This is useful precedent for managing an official upstream project, but it is a different licensing model from MM's stated goal. Central control of the official repository does not itself prohibit independently maintained forks.
+Its [contribution policy](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) sets rules for issues, pull requests and review and requires a Contributor License Agreement. Official-project governance is a useful analogy, but MM's owner has chosen not to adopt that separate CLA requirement. TypeScript is also a different licensing model from MM's stated goal. Central control of the official repository does not itself prohibit independently maintained forks.
 
 ## Rights and provenance
 
