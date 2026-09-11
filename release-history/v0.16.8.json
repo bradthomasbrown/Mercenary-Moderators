@@ -1,0 +1,47 @@
+{
+  "recordedAt": "2026-09-11T17:59:46.815349+00:00",
+  "status": "published-private-prerelease",
+  "tag": "v0.16.8",
+  "sourceCommit": "65b9149f53290dcaca55b235de5d8c409fa4ee40",
+  "repositoryPrivate": true,
+  "installer": "mm-user-0.16.8.zip",
+  "sha256": "ebaa0c669df91a529ffca12abc54ff8f6bb4a72e81ffde8c4121be08a2250649",
+  "uploadedAssetsDownloadedAndCompared": true,
+  "workflowUrl": "https://github.com/bradthomasbrown/Mercenary-Moderators/actions/runs/34630766453",
+  "release": {
+    "assets": [
+      {
+        "apiUrl": "https://api.github.com/repos/bradthomasbrown/Mercenary-Moderators/releases/assets/557734709",
+        "contentType": "application/zip",
+        "createdAt": "2026-09-11T17:59:43Z",
+        "digest": "sha256:ebaa0c669df91a529ffca12abc54ff8f6bb4a72e81ffde8c4121be08a2250649",
+        "downloadCount": 0,
+        "id": "RA_kwDOUXNO5M4hPls1",
+        "label": "",
+        "name": "mm-user-0.16.8.zip",
+        "size": 180489,
+        "state": "uploaded",
+        "updatedAt": "2026-09-11T17:59:44Z",
+        "url": "https://github.com/bradthomasbrown/Mercenary-Moderators/releases/download/v0.16.8/mm-user-0.16.8.zip"
+      },
+      {
+        "apiUrl": "https://api.github.com/repos/bradthomasbrown/Mercenary-Moderators/releases/assets/557734708",
+        "contentType": "text/plain; charset=utf-8",
+        "createdAt": "2026-09-11T17:59:43Z",
+        "digest": "sha256:c53292b2faf790ab100ba44d07edb5d654cf4f688eaf0dcaff1ed7107e694ec1",
+        "downloadCount": 0,
+        "id": "RA_kwDOUXNO5M4hPls0",
+        "label": "",
+        "name": "SHA256SUMS.txt",
+        "size": 85,
+        "state": "uploaded",
+        "updatedAt": "2026-09-11T17:59:44Z",
+        "url": "https://github.com/bradthomasbrown/Mercenary-Moderators/releases/download/v0.16.8/SHA256SUMS.txt"
+      }
+    ],
+    "isDraft": false,
+    "isPrerelease": true,
+    "tagName": "v0.16.8",
+    "url": "https://github.com/bradthomasbrown/Mercenary-Moderators/releases/tag/v0.16.8"
+  }
+}
