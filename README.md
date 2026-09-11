@@ -4,9 +4,9 @@ Tag 4chan posts, discover tags from other readers, and choose which posts to hid
 
 [Website and download](https://mm.bradthomasbrown.com/) · [Installation and usage wiki](https://mm.bradthomasbrown.com/wiki)
 
-[GitHub releases](https://github.com/bradthomasbrown/Mercenary-Moderators/releases) provide the versioned installer ZIP and its checksum. Choose the **mm-user-…zip** asset; GitHub's automatic **Source code** archives are not the installer. Releases are visible only to people with access while this repository is private.
+[GitHub releases](https://github.com/bradthomasbrown/Mercenary-Moderators/releases) provide the versioned installer ZIP and its checksum. Choose the **mm-user-…zip** asset; GitHub's automatic **Source code** archives are not the installer.
 
-**Private review repository.** This first snapshot contains the source shipped in user extension **0.16.8**. Documentation and code organization are being reviewed before a decision about public release. A software license has not yet been selected.
+This repository contains the source shipped in user extension **0.16.8**, licensed under [PolyForm Shield 1.0.0](LICENSE), with [third-party exceptions](THIRD-PARTY-NOTICES.md). Independent feature work and pull requests are welcome; see [Contributing](CONTRIBUTING.md).
 
 ## See how it works
 
@@ -66,12 +66,12 @@ Describe what you tried, what happened, and your extension version and browser. 
 
 The initial implementation was written by agents. Maintenance work focuses on understandable modules, reproducible releases, tested behavior and clearly documented limitations. [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) records the current gaps and review priorities.
 
-This repository is a review snapshot of the shipped user extension. It does not contain the entire development workspace or its history. A repository update does not automatically deploy a new extension version.
+This repository is a snapshot of the shipped user extension. It does not contain the entire development workspace or its history. A repository update does not automatically deploy a new extension version.
 
 ## License and attribution
 
-No project license has been selected for this private review. Do not describe this snapshot as open source until that decision and the third-party attribution review are complete. Existing source attribution is retained; see [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+[PolyForm Shield 1.0.0](LICENSE) permits work on the code for permitted purposes and restricts providing competing products, including free substitutes. This is source-available software. See [NOTICE](NOTICE) for scope and required notices and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for exceptions, including the LGPL button stylesheet.
 
-[`docs/LICENSE-OPTIONS.md`](docs/LICENSE-OPTIONS.md) compares restrictive source-available options for the owner's decision; it does not grant a license.
+You can develop features and submit pull requests without prior permission or a separate contributor agreement. Contributions use the applicable project license; maintainers decide which changes to merge. [Contribution details](CONTRIBUTING.md) · [License decision](docs/LICENSE-OPTIONS.md) · [Attribution](docs/ATTRIBUTION.md)
 
 Mercenary Moderators is independent and is not affiliated with 4chan.

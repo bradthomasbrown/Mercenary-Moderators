@@ -1,0 +1,37 @@
+name: Publish license notices
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - LICENSE
+      - NOTICE
+      - CONTRIBUTING.md
+      - THIRD-PARTY-NOTICES.md
+      - LICENSES/**
+      - docs/releases/**
+      - scripts/build_notices.py
+      - scripts/sync_publication_notices.py
+      - .github/workflows/publication-notices.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publication-notices
+  cancel-in-progress: false
+
+jobs:
+  notices:
+    if: github.repository == 'bradthomasbrown/Mercenary-Moderators'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify existing assets and publish legal documents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/sync_publication_notices.py
