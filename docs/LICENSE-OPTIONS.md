@@ -2,21 +2,48 @@
 
 The owner wants people to inspect the code while retaining more control over reuse. No license is selected or granted by this document, and the repository remains private.
 
-## Recommended starting point
+## Updated recommendation: PolyForm Shield plus contribution terms
 
-**PolyForm Strict 1.0.0** is the closest established option if the intended rule is: permit noncommercial use and inspection, and require separate permission for modifications, redistribution, or commercial use. It is a source-available license, not an open-source license.
+The owner clarified the goal: prevent someone from copying Mercenary Moderators and providing a competing project, including a free competitor during the beta and competitors after the business develops. People should be able to develop improvements and contribute them to the official project through pull requests.
 
-That restriction on modifications matters: it also limits ordinary third-party patches and private customizations. If the owner wants those while controlling redistribution, tailored source-available terms may be a better fit; the final terms should receive legal review before public release.
+**PolyForm Shield 1.0.0** is now the recommended starting point. This supersedes the earlier provisional Strict recommendation. Shield permits changes and redistribution for permitted purposes, while excluding competing products. Strict's general modification restriction would obstruct the contribution model the owner wants.
 
-| Option | What it permits | What it restricts | Main tradeoff |
-| --- | --- | --- | --- |
-| [PolyForm Strict 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Strict-1.0.0.md) | Noncommercial purposes, including specified personal and nonprofit uses | Grants no permission for modification or redistribution, and excludes commercial purposes | Strong control, but limits community modifications and distribution |
-| [PolyForm Shield 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Shield-1.0.0.md) | Use, modification and redistribution for permitted purposes, including noncompeting commercial uses | Competing products, including free competitors, under its defined scope | Better suited to competition concerns than a general ban on reuse |
-| [PolyForm Noncommercial 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Noncommercial-1.0.0.md) | Noncommercial use, modification and redistribution | Commercial purposes | Allows noncommercial forks and redistribution, so it grants more rights than Strict |
+Shield expressly states: “Goods and services compete even when provided free of charge.” A revenue model is therefore not a prerequisite to its competition restriction. Its definition also addresses different interfaces and platforms. Publishing a substitute using the licensed code is the intended concern; the license is not a general prohibition on independently developed competition.
 
-These summaries do not replace the license texts. Their definitions, exceptions, patent terms and conditions matter. None offers the broad commercial-use rights required of an open-source license.
+Shield's scope includes both the licensed software and products the licensor or affiliates provide using it. That is broader than Perimeter's focus on competition with the software itself, and may be useful as the project develops. This is a proposed licensing fit, not a conclusion about enforceability in a particular dispute.
 
-AGPL is a different choice: it allows commercial use and redistribution while requiring source availability under specified conditions. It would not implement a general ban on commercial reuse. A license with an eventual open-source conversion also would not provide indefinite restrictions.
+| Option | Fit for the clarified goal | Important limit |
+| --- | --- | --- |
+| [PolyForm Shield 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Shield-1.0.0.md) | Recommended: allows work on the code for permitted purposes and restricts competing products, including free ones; also addresses products provided using the software | Has specific new-product and discontinued-product provisions; does not require every improvement to be contributed upstream |
+| [PolyForm Perimeter 1.0.1](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Perimeter-1.0.1.md) | Narrower alternative: restricts providing others a product that competes with the software, including free alternatives | Does not have Shield's wider scope covering products the licensor provides using the software |
+| [PolyForm Strict 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Strict-1.0.0.md) | Restricts reuse more broadly | Also withholds modification and redistribution rights generally, making ordinary contribution work harder |
+| [PolyForm Noncommercial 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Noncommercial-1.0.0.md) | Allows noncommercial modifications and redistribution | Does not implement the requested restriction on free competing forks |
+
+These are source-available restrictions, not open-source licenses. The full license definitions, exceptions and conditions control.
+
+### Future protection has boundaries
+
+Shield's New Products clause allows an existing, previously noncompeting use to continue with previously available versions if the licensor later enters that market. It does not let the owner retroactively prohibit every previously permitted use by expanding into a new business. A future version can have different terms only within the rights actually held; it does not erase rights already granted.
+
+Shield also has a Discontinued Products provision. A `Licensor Line of Business:` notice can preserve a specified line against that exception. If Shield is selected, review a precise description of MM's actual line of business, such as browser-based post tagging, filtering and tag-sharing markets. This is a candidate scope description, not a notice applied to the code by this document.
+
+### Encourage contributions while retaining project control
+
+The recommended package has three parts:
+
+1. Shield as the source license, with the owner and required notices identified accurately.
+2. A contribution policy that clearly permits the development work needed for patches: contribution forks or branches, local test builds, and pull requests. Explain the distinction between preparing a contribution and offering a competing product. Any supplemental permission should be checked against the chosen license rather than assumed from a README invitation.
+3. A contributor agreement covering the rights the project needs to use, modify, distribute and, if desired, relicense accepted contributions for future releases or commercial terms. Contributors can retain copyright while granting specified rights; merely merging a pull request does not transfer their copyright to the project.
+
+The policy should make upstream contributions attractive through clear scope, reproducible checks, responsive review and credit. Maintainers retain decisions over merges, the official roadmap, branding and official releases. Neither Shield nor a contribution invitation forces someone to submit every private improvement as a pull request. Independently written alternatives also cannot be ruled out simply by choosing this source license.
+
+No contributor agreement or supplemental legal permission is adopted by this proposal. Have the final source/contribution terms reviewed before applying them.
+
+## TypeScript comparison
+
+[TypeScript's license](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) is Apache 2.0. It permits modification and redistribution, including commercial competing forks, subject to its conditions. It is not an anti-fork or anti-competition license.
+
+Its [contribution policy](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) sets rules for issues, pull requests and review and requires a Contributor License Agreement. This is useful precedent for managing an official upstream project, but it is a different licensing model from MM's stated goal. Central control of the official repository does not itself prohibit independently maintained forks.
 
 ## Rights and provenance
 
