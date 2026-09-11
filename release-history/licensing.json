@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-09-11T18:26:11.100621+00:00",
+  "status": "license-notices-and-release-notes-verified",
+  "repositoryPrivate": true,
+  "tag": "v0.16.8",
+  "sourceCommit": "3d816f82152a6c5a8a6b554749d134c5899923c4",
+  "installerUnchanged": true,
+  "installerSha256": "ebaa0c669df91a529ffca12abc54ff8f6bb4a72e81ffde8c4121be08a2250649",
+  "legalAsset": {
+    "filename": "mm-legal-notices-e88bc50ab05090fb.zip",
+    "sha256": "e88bc50ab05090fb76689f172574f44c122d95e434916f9dafe8f935a5d667ba",
+    "files": [
+      "LICENSE",
+      "NOTICE",
+      "CONTRIBUTING.md",
+      "THIRD-PARTY-NOTICES.md",
+      "LICENSES/LGPL-2.0-or-later.txt"
+    ]
+  },
+  "licenseSha256": "56328093d57c87dcf2811ddcc824caf2723a07ffc332e6fbe4f9f108a2893a91",
+  "releaseNotesVerified": true,
+  "releaseUrl": "https://github.com/bradthomasbrown/Mercenary-Moderators/releases/tag/v0.16.8",
+  "workflowUrl": "https://github.com/bradthomasbrown/Mercenary-Moderators/actions/runs/34633234376"
+}
