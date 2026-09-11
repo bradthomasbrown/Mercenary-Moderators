@@ -10,9 +10,9 @@ That restriction on modifications matters: it also limits ordinary third-party p
 
 | Option | What it permits | What it restricts | Main tradeoff |
 | --- | --- | --- | --- |
-| [PolyForm Strict 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/master/PolyForm-Strict-1.0.0.md) | Noncommercial purposes, including specified personal and nonprofit uses | Grants no permission for modification or redistribution, and excludes commercial purposes | Strong control, but limits community modifications and distribution |
-| [PolyForm Shield 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/master/PolyForm-Shield-1.0.0.md) | Use, modification and redistribution for permitted purposes, including noncompeting commercial uses | Competing products, including free competitors, under its defined scope | Better suited to competition concerns than a general ban on reuse |
-| [PolyForm Noncommercial 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/master/PolyForm-Noncommercial-1.0.0.md) | Noncommercial use, modification and redistribution | Commercial purposes | Allows noncommercial forks and redistribution, so it grants more rights than Strict |
+| [PolyForm Strict 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Strict-1.0.0.md) | Noncommercial purposes, including specified personal and nonprofit uses | Grants no permission for modification or redistribution, and excludes commercial purposes | Strong control, but limits community modifications and distribution |
+| [PolyForm Shield 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Shield-1.0.0.md) | Use, modification and redistribution for permitted purposes, including noncompeting commercial uses | Competing products, including free competitors, under its defined scope | Better suited to competition concerns than a general ban on reuse |
+| [PolyForm Noncommercial 1.0.0](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Noncommercial-1.0.0.md) | Noncommercial use, modification and redistribution | Commercial purposes | Allows noncommercial forks and redistribution, so it grants more rights than Strict |
 
 These summaries do not replace the license texts. Their definitions, exceptions, patent terms and conditions matter. None offers the broad commercial-use rights required of an open-source license.
 
