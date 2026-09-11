@@ -4,6 +4,8 @@ Tag 4chan posts, discover tags from other readers, and choose which posts to hid
 
 [Website and download](https://mm.bradthomasbrown.com/) · [Installation and usage wiki](https://mm.bradthomasbrown.com/wiki)
 
+[GitHub releases](https://github.com/bradthomasbrown/Mercenary-Moderators/releases) provide the versioned installer ZIP and its checksum. Choose the **mm-user-…zip** asset; GitHub's automatic **Source code** archives are not the installer. Releases are visible only to people with access while this repository is private.
+
 **Private review repository.** This first snapshot contains the source shipped in user extension **0.16.8**. Documentation and code organization are being reviewed before a decision about public release. A software license has not yet been selected.
 
 ## See how it works
@@ -69,5 +71,7 @@ This repository is a review snapshot of the shipped user extension. It does not 
 ## License and attribution
 
 No project license has been selected for this private review. Do not describe this snapshot as open source until that decision and the third-party attribution review are complete. Existing source attribution is retained; see [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+
+[`docs/LICENSE-OPTIONS.md`](docs/LICENSE-OPTIONS.md) compares restrictive source-available options for the owner's decision; it does not grant a license.
 
 Mercenary Moderators is independent and is not affiliated with 4chan.

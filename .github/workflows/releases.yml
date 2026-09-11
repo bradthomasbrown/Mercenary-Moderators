@@ -1,0 +1,56 @@
+name: Verified extension release
+
+on:
+  push:
+    tags: ['v[0-9]*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag, for example v0.16.8
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          persist-credentials: false
+      - name: Keep initial releases private
+        run: test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true
+      - name: Reproduce the exact installer and checksum
+        run: python3 scripts/prepare_release.py --tag "$RELEASE_TAG"
+      - name: Upload, verify, and publish the prerelease
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo 'A release already exists for this tag; refusing to replace it.'
+            exit 1
+          fi
+          gh release create "$RELEASE_TAG" "dist/$RELEASE_ZIP" dist/SHA256SUMS.txt \
+            --verify-tag --draft --prerelease \
+            --title "Mercenary Moderators $RELEASE_VERSION · user extension" \
+            --notes-file "docs/releases/$RELEASE_VERSION.md"
+          gh release download "$RELEASE_TAG" --pattern "$RELEASE_ZIP" --pattern SHA256SUMS.txt \
+            --dir "$RUNNER_TEMP/mm-release-download"
+          cmp "dist/$RELEASE_ZIP" "$RUNNER_TEMP/mm-release-download/$RELEASE_ZIP"
+          cmp dist/SHA256SUMS.txt "$RUNNER_TEMP/mm-release-download/SHA256SUMS.txt"
+          gh release edit "$RELEASE_TAG" --draft=false --prerelease
+          gh release view "$RELEASE_TAG" --json url,tagName,isDraft,isPrerelease,assets > .release-response.json
+      - name: Record the release result for repository maintenance
+        if: always()
+        env:
+          RELEASE_JOB_STATUS: ${{ job.status }}
+        run: python3 scripts/record_release.py

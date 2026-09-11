@@ -17,4 +17,12 @@ Current gaps and proposed work:
 
 The origin of the code is disclosed in the README. Review conclusions should rest on observed behavior and inspectable evidence. This initial snapshot is not represented as independently audited or fully maintainable.
 
-During private preparation, repository files and tags may be maintained through repository-scoped Git write access. Issue management, release-asset uploads and repository settings require separate GitHub API permissions. Making this repository public and changing live product behavior remain explicit decisions.
+During private preparation, repository files and tags may be maintained through repository-scoped Git write access. The release workflow uses GitHub's temporary repository token with `contents: write` to upload releases and commit a result record. No personal access token is stored here. Other API administration still needs appropriate access. Making this repository public and changing live product behavior remain explicit decisions.
+
+## Versioned installer releases
+
+Before pushing a `v…` tag, update the source, `release.json`, and `docs/releases/<version>.md`, then run `python3 scripts/prepare_release.py --tag v<version>`. The version tag must match the release metadata, and the source must reproduce the recorded archive.
+
+The tag workflow builds the installer and `SHA256SUMS.txt`, creates a draft prerelease, downloads and compares both uploaded assets, then publishes it inside the private repository. It refuses an existing release instead of replacing its assets. Failures may leave a draft for investigation; do not delete or replace it without checking its state.
+
+The workflow records its result at `release-history/v<version>.json` on `main`. Maintainers using only Git can fetch that commit to verify the release URL, exact source commit, asset metadata and workflow result. The workflow refuses publication after a change to public repository visibility until that separate promotion policy is deliberately updated. Public-source approval and licensing remain owner decisions.
