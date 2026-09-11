@@ -1,0 +1,110 @@
+{
+  "version": "0.16.8",
+  "filename": "mm-user-0.16.8.zip",
+  "sha256": "ebaa0c669df91a529ffca12abc54ff8f6bb4a72e81ffde8c4121be08a2250649",
+  "byteLength": 180489,
+  "sourceRevision": "b459e78f94f260094ae38813342275552c65e4fdca73875f1228f05a7c363ec3",
+  "files": [
+    {
+      "path": "adapter.css",
+      "byteLength": 10610,
+      "sha256": "f76a7ea49b79514a51558f882e538f65201fa45f49d7cf0c1c3baf09f1a743a2"
+    },
+    {
+      "path": "error-trace.js",
+      "byteLength": 6765,
+      "sha256": "070d3eb629ae8181b3070e14a8ea31fb08e008f53b61eeaa994c01857cc20bdb"
+    },
+    {
+      "path": "ios-buttons.css",
+      "byteLength": 3953,
+      "sha256": "92ac3ae1cf69957078eda335676166526d4809428526cf85631934cd3eff0e51"
+    },
+    {
+      "path": "manifest.json",
+      "byteLength": 1514,
+      "sha256": "0052a65a1f988aa38a687707344c4fc8b8935ad3b3bf3b70a3c101ebf2073651"
+    },
+    {
+      "path": "market-component.js",
+      "byteLength": 73660,
+      "sha256": "f1bb01f42f8d6b84c69ac789b49ab364d3cf2cab82b4964783ee6cb595c7174f"
+    },
+    {
+      "path": "market-worker.js",
+      "byteLength": 2471,
+      "sha256": "48189289dd3109f610a6cf47762787515a06feb623c5c37b5397649b7b192d41"
+    },
+    {
+      "path": "native-hiding.js",
+      "byteLength": 8914,
+      "sha256": "955dd50b061b60837bc517a4f7c026062b4fe28bd71a41c73350d75c5fb90e2d"
+    },
+    {
+      "path": "native-popup.js",
+      "byteLength": 4154,
+      "sha256": "5bbd3b71af5f87769d585879fc1cc4b264eae667f9950edb7c293cc37a3cf6c0"
+    },
+    {
+      "path": "packaged-rules.js",
+      "byteLength": 756,
+      "sha256": "838ba8cb6376dfd27f27b9010f94f8e758e141fe12d32e1bb56b2338bcdc7763"
+    },
+    {
+      "path": "persistent-rules.js",
+      "byteLength": 2567,
+      "sha256": "7734ff2222e46a7693275546d0558cb9ba80edd61253f6f6d5dc44abc79d2877"
+    },
+    {
+      "path": "recovery-codec.js",
+      "byteLength": 2874,
+      "sha256": "ec4c38bd1b5e8927563ba6d04ad99c515e7fb5c6db08260f1db54bbc624a331b"
+    },
+    {
+      "path": "recovery.css",
+      "byteLength": 958,
+      "sha256": "8f07ad067cde449f97103b623b03ac21ff667972680a2d53a345af6556e0bf8a"
+    },
+    {
+      "path": "recovery.html",
+      "byteLength": 3322,
+      "sha256": "a1fd03e567910c83abdece2f89e2ff862f85a5cb9f879ba2adca6868f80c81e6"
+    },
+    {
+      "path": "recovery.js",
+      "byteLength": 7183,
+      "sha256": "e321954086a188d3ce219c0e568f58015663cee367507a62ce0efb6a455d00d3"
+    },
+    {
+      "path": "tagging-component.js",
+      "byteLength": 25910,
+      "sha256": "0c7550e59224447b3ec0aec81cf19a75928ed1108a5518a1f67c4e144964a367"
+    },
+    {
+      "path": "user-data-worker.js",
+      "byteLength": 15531,
+      "sha256": "51b51ed03be92974b478b765b828c15f878a001c557ecce96d6c555e8d61ce25"
+    },
+    {
+      "path": "user-popup.css",
+      "byteLength": 556,
+      "sha256": "9552bae960018139a7d6d5d5bd72e809738a55ad7a1dd24d705558317d5f6304"
+    },
+    {
+      "path": "user-popup.html",
+      "byteLength": 1565,
+      "sha256": "ac07390f1783373d87532d788f29c50da6e0bf08c6de7034447843a2da40575a"
+    },
+    {
+      "path": "user-popup.js",
+      "byteLength": 3040,
+      "sha256": "55fa4b302f9a285ee6aadc9e5c86be584f1f1d070250d7ee3d4f0b98e85e1b8b"
+    },
+    {
+      "path": "user-worker.js",
+      "byteLength": 2038,
+      "sha256": "5fb5840cfa2da6a37ece2940de7eb69bfb8faded273f11393e5d1489534ac005"
+    }
+  ],
+  "downloadPath": "/api/extension/user-releases/ebaa0c669df91a529ffca12abc54ff8f6bb4a72e81ffde8c4121be08a2250649/mm-user-0.16.8.zip"
+}

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Mercenary Moderators",
+  "version": "0.16.8",
+  "description": "Tag 4chan posts, share tags on the market, and filter threads with your chosen tags.",
+  "action": {
+    "default_popup": "user-popup.html"
+  },
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://mm.bradthomasbrown.com/*"
+  ],
+  "background": {
+    "service_worker": "user-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://boards.4chan.org/*/thread/*"
+      ],
+      "js": [
+        "error-trace.js",
+        "native-popup.js",
+        "native-hiding.js",
+        "market-component.js",
+        "tagging-component.js",
+        "packaged-rules.js",
+        "persistent-rules.js"
+      ],
+      "css": [
+        "adapter.css",
+        "ios-buttons.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  },
+  "options_page": "recovery.html",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhQkUQw+Zw851fnCZTrvPMQFchwWBL7Dn3jxnJNuLitttin4wLWoWOIprPeme6w7+uZInM4T2kFjWSnnecBZLhu8X25x7TwGcm0V6prM6gID4yH4WxqTX8VVicwrg2l39/sV9jkCw9OplcdMEUMBOriSS6I4uUyRS2R6K2Uzvm06gtIATvh8/K4z4AovBsSNs32QzeSDrWa6Xf4vx7WhPy4B0HtDH2+LBKdRDXNxitOuv6ghiLiAX2O6ngGguZ4DBiLZ85WI5RWteqLLl/dxn37+rYTnp8q9jA/qCMnAkTMCrqBQwAcAFpbHuiVyNWN4LTeZiPpZ3tScYyEETF3RKhQIDAQAB",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "user@mm.bradthomasbrown.com"
+    }
+  }
+}

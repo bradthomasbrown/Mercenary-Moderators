@@ -1,0 +1,71 @@
+/* User-selected Orion/iOS/WebKit reference: https://buttons.bradthomasbrown.com/#webkit-title
+   Port of button-comparison/public/page.css, buttons 5 and 6. Research:
+   https://github.com/WebKit/WebKit/blob/9b0f01ca9e14c8cf7b5485dadeaaeed687e2a851/Source/WebCore/css/html.css#L868-L906
+   https://github.com/WebKit/WebKit/blob/9b0f01ca9e14c8cf7b5485dadeaaeed687e2a851/Source/WebCore/rendering/ios/RenderThemeIOS.mm#L957-L1003
+   https://github.com/WebKit/WebKit/blob/9b0f01ca9e14c8cf7b5485dadeaaeed687e2a851/Source/WebCore/rendering/ios/RenderThemeIOS.mm#L427-L456
+   Published geometry: 11px system font, 0 1em padding, 20/11-em minimum height,
+   one-pixel border and small-button capsule rounding. Documented adaptations:
+   appearance:none, 999px radius, rounded 1.818182em, literal blue/white colors.
+   Keep this base in every state. Paint the input, never a replacement face.
+   See mercenary-moderators-idea/ios-button-reference.md for scope and attribution. */
+input[data-mm-ios-action] {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  font: 11px system-ui;
+  min-height: 1.818182em;
+  padding: 0 1em;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background-color: #007aff;
+  color: #fff;
+  text-align: center;
+  white-space: pre;
+  cursor: default;
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+/* The disabled palette follows the reference's outline/result examples.
+   It persists after a successful action's temporary green paint ends. */
+/* Neutral navigation is an MM palette choice using the same WebKit geometry. */
+input[data-mm-ios-action][data-mm-action-tone="neutral"] { background-color: #e5e5ea; color: #1c1c1e; }
+
+.mm-tag-popup-actions[data-mm-tag-add-actions] { display: flex; justify-content: flex-end; align-items: center; gap: 6px; }
+/* These are MM combobox options, not action buttons or native host controls. */
+.mm-tag-popup .mm-tag-suggestions { box-sizing: border-box; width: 100%; min-width: 0; max-height: 180px; overflow-y: auto; overscroll-behavior: contain; margin: 3px 0 6px; padding: 0; list-style: none; border: 1px solid var(--mm-tags-divider, #b7c5d9); background: var(--mm-native-popup-background, var(--mm-post-background, #d6daf0)); color: var(--mm-native-popup-color, inherit); }
+.mm-tag-popup .mm-tag-suggestions[hidden] { display: none; }
+.mm-tag-suggestions [role="option"] { margin: 0; padding: 6px 8px; font: 16px/1.35 system-ui; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+.mm-tag-suggestions [role="option"][aria-selected="true"] { background: #007aff; color: #fff; }
+
+input[data-mm-ios-action]:disabled { background-color: #e5e5ea; color: #636366; }
+.mm-action-frame { display: inline-grid; vertical-align: middle; flex: none; }
+.mm-action-frame > input[data-mm-ios-action], .mm-action-spinner { grid-area: 1 / 1; }
+.mm-action-spinner {
+  display: none;
+  pointer-events: none;
+  place-self: center;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: mm-purchase-spin .7s linear infinite;
+}
+input[data-mm-ios-action][data-mm-action-state="pending"] { background-color: #007aff; color: transparent; }
+input[data-mm-ios-action][data-mm-action-state="pending"] + .mm-action-spinner { display: block; }
+input[data-mm-ios-action][data-mm-action-state="success"] { background-color: #68df91; color: #153b21; }
+input[data-mm-ios-action][data-mm-action-state="error"] {
+  background-color: #fa8585;
+  color: #4b1212;
+  animation: mm-purchase-shake .28s ease-in-out;
+}
+@keyframes mm-purchase-spin { to { transform: rotate(360deg); } }
+@keyframes mm-purchase-shake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-action-spinner, input[data-mm-ios-action][data-mm-action-state="error"] { animation: none; }
+}

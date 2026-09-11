@@ -1,0 +1,2 @@
+:root{font:14px/1.5 system-ui,sans-serif;color-scheme:light dark}*{box-sizing:border-box}body{margin:0;width:340px;max-width:100vw}main{padding:16px;min-width:0}h1{font-size:1.25rem;margin:0}p{overflow-wrap:anywhere}a{color:LinkText}label{display:block}#version{opacity:.7}
+details{min-width:0}summary{cursor:pointer}#trace-output{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;overflow:auto;resize:vertical;font:12px/1.4 ui-monospace,monospace;white-space:pre} .trace-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
